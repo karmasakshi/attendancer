@@ -57,6 +57,24 @@ gulp.task('vendor-js', function () {
         .pipe(gulp.dest('./tmp/'));
 });
 
+/* --- STATIC CONTENT --- */
+
+gulp.task('static', ['assets', 'favicon'], function () {
+    return true;
+});
+
+gulp.task('assets', function () {
+    return gulp.src('./src/assets/*.*')
+        .pipe(gulp.dest('./dist/assets/'));
+});
+
+gulp.task('favicon', function () {
+    return gulp.src('./src/favicon.ico')
+        .pipe(gulp.dest('./dist/'));
+});
+
+/* --- OTHERS --- */
+
 gulp.task('wiredep', function () {
     return gulp.src('./src/index.html')
         .pipe(wiredep())
