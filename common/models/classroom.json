@@ -24,7 +24,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "institution": {
+      "type": "belongsTo",
+      "model": "institution",
+      "foreignKey": ""
+    },
+    "students": {
+      "type": "hasMany",
+      "model": "student",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

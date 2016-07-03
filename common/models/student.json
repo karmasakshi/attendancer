@@ -13,10 +13,24 @@
     "lastName": {
       "type": "string",
       "required": true
+    },
+    "rollNumber": {
+      "type": "number"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "institution": {
+      "type": "belongsTo",
+      "model": "institution",
+      "foreignKey": ""
+    },
+    "classroom": {
+      "type": "belongsTo",
+      "model": "classroom",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

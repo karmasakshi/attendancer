@@ -39,7 +39,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "students": {
+      "type": "hasMany",
+      "model": "student",
+      "foreignKey": ""
+    },
+    "teachers": {
+      "type": "hasMany",
+      "model": "teacher",
+      "foreignKey": ""
+    },
+    "classrooms": {
+      "type": "hasMany",
+      "model": "classroom",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
