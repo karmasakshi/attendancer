@@ -1,3 +1,4 @@
+*.css
 *.csv
 *.dat
 *.iml
@@ -14,6 +15,9 @@
 .idea
 .project
 .strong-pm
+bower_components
 coverage
+dist
 node_modules
 npm-debug.log
+tmp
