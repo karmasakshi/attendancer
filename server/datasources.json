@@ -4,9 +4,9 @@
     "port": 0,
     "url": "",
     "database": "attendancer",
-    "password": "",
+    "password": "root",
     "name": "mysql",
-    "user": "",
+    "user": "root",
     "connector": "mysql"
   }
 }
