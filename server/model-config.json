@@ -24,5 +24,9 @@
   "classroom": {
     "dataSource": "mysql",
     "public": true
+  },
+  "student": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
