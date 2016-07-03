@@ -12,5 +12,9 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "institution": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
