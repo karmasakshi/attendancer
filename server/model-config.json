@@ -16,5 +16,9 @@
   "institution": {
     "dataSource": "mysql",
     "public": true
+  },
+  "teacher": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
