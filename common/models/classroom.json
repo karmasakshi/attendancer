@@ -1,0 +1,30 @@
+{
+  "name": "classroom",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "grade": {
+      "type": "number",
+      "required": true
+    },
+    "division": {
+      "type": "string",
+      "required": true
+    },
+    "startYear": {
+      "type": "number",
+      "required": true
+    },
+    "endYear": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
