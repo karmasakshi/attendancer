@@ -1,1 +1,12 @@
-{}
+{
+  "mysql": {
+    "host": "",
+    "port": 0,
+    "url": "",
+    "database": "attendancer",
+    "password": "",
+    "name": "mysql",
+    "user": "",
+    "connector": "mysql"
+  }
+}
