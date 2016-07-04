@@ -21,6 +21,11 @@
       "type": "hasMany",
       "model": "subject",
       "foreignKey": ""
+    },
+    "students": {
+      "type": "hasMany",
+      "model": "student",
+      "foreignKey": ""
     }
   },
   "acls": [],

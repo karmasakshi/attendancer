@@ -38,6 +38,11 @@
       "type": "hasMany",
       "model": "absentee",
       "foreignKey": ""
+    },
+    "grade": {
+      "type": "hasOne",
+      "model": "grade",
+      "foreignKey": ""
     }
   },
   "acls": [],

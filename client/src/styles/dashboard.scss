@@ -1,0 +1,9 @@
+.module-card {
+    height: 325px;
+}
+
+@media screen and (max-width: 480px) {
+    .module-card {
+        height: initial;
+    }
+}

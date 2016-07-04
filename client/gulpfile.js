@@ -35,6 +35,14 @@ gulp.task('vendor-css', function () {
         .pipe(gulp.dest('./tmp/'));
 });
 
+/* --- HTML --- */
+
+gulp.task('html', function () {
+    return gulp.src('./src/modules/**/*.html')
+        .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+        .pipe(gulp.dest('./dist/modules/'));
+});
+
 /* --- JS --- */
 
 gulp.task('js', ['app-js', 'vendor-js'], function () {
@@ -92,3 +100,7 @@ gulp.task('index', function () {
         .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
         .pipe(gulp.dest('./dist/'));
 });
+
+/* --- DEFAULT --- */
+
+gulp.task('default', ['index', 'css', 'html', 'js', 'static']);
