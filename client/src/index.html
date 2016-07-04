@@ -28,11 +28,11 @@
     <!-- Navbar -->
     <header class="navbar" style="background-color: rgba(0, 0, 0, 0.05);">
         <section class="navbar-section">
-            <a href="#/" class="navbar-brand"><img src="assets/logo.png" style="height: 20px; margin-bottom: -2px;" alt="Logo" /></a>
+            <a ui-sref="dashboard" class="navbar-brand"><img src="assets/logo.png" style="height: 20px; margin-bottom: -3px;" alt="Logo" /></a>
         </section>
         <section class="navbar-section">
-            <a href="#/login" class="btn btn-link" ng-hide="$root.user !== null">Login</a>
-            <a href="#/logout" class="btn btn-link" ng-hide="$root.user === null">Logout</a>
+            <a ui-sref="login" class="btn btn-link" ng-hide="$root.user !== null">Login</a>
+            <a ui-sref="logout" class="btn btn-link" ng-hide="$root.user === null">Logout</a>
         </section>
     </header>
 
@@ -59,7 +59,7 @@
     <script src="js/run.js"></script>
 
     <!-- Modules --->
-    <script src="modules/class/ClassCtrl.js"></script>
+    <script src="modules/dashboard/DashboardCtrl.js"></script>
     <script src="modules/home/HomeCtrl.js"></script>
     <script src="modules/user/LoginCtrl.js"></script>
     <script src="modules/user/LogoutCtrl.js"></script>

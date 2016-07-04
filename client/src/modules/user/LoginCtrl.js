@@ -26,9 +26,27 @@ angular
 
         $scope.login = function () {
 
-            $rootScope.user = true;
+            sessionStorage.user = 'true';
 
-            $rootScope.changeState('home');
+            $rootScope.initializeUser().then(function () {
+
+                var nextState = 'dashboard';
+
+                if (sessionStorage.redirectState) {
+
+                    nextState = sessionStorage.redirectState;
+
+                    sessionStorage.removeItem('redirectState');
+
+                }
+
+                $rootScope.changeState(nextState);
+
+            }, function () {
+
+                $rootScope.notify('Couldn\'t log you in.');
+
+            });
 
         };
 

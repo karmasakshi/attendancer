@@ -16,10 +16,10 @@ angular
                 templateUrl: 'modules/home/home.html'
             })
 
-            .state('class', {
-                url: '/class',
-                controller: 'ClassCtrl',
-                templateUrl: 'modules/class/class.html'
+            .state('dashboard', {
+                url: '/dashboard',
+                controller: 'DashboardCtrl',
+                templateUrl: 'modules/dashboard/dashboard.html'
             })
 
             .state('login', {

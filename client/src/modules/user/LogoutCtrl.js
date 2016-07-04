@@ -12,6 +12,8 @@ angular
 
         $scope.initialize = function () {
 
+            sessionStorage.clear();
+
             $rootScope.user = null;
 
             $rootScope.changeState('login');
