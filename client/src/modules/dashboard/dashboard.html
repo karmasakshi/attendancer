@@ -1,7 +1,7 @@
 <div class="container">
     <div class="columns" style="flex-wrap: wrap;">
         <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="module in modules">
-            <div class="card module-card" style="cursor: pointer; margin: 5px;">
+            <div class="card module-card" style="cursor: pointer; margin: 5px;" ng-click="$root.changeState(module.state)">
                 <div class="card-image" ng-style="module.imageURL"></div>
                 <div class="card-header">
                     <h4 class="card-title">{{module.name}}</h4>

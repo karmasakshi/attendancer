@@ -21,46 +21,46 @@ angular
                 {
                     name: 'Grade',
                     meta: 'View and manage grades.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'In addition to managing grades, you can manage a grade\'s students and subjects here.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=grade")' },
+                    description: 'In addition to managing grades, you can manage a grade\'s students and subjects here.',
+                    state: 'grade'
                 },
                 {
                     name: 'Student',
                     meta: 'View and manage students.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'In addition to managing students, you can manage a student\'s absence, grade and subjects here.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=student")' },
+                    description: 'In addition to managing students, you can manage a student\'s absence, grade and subjects here.',
+                    state: 'home'
                 },
                 {
                     name: 'Subject',
                     meta: 'View and manage subjects.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'In addition to managing subjects, you can manage students that have opted for a subject here.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=subject")' },
+                    description: 'In addition to managing subjects, you can manage students that have opted for a subject here.',
+                    state: 'home'
                 },
                 {
                     name: 'Lecture',
                     meta: 'View and manage past lectures.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'In addition to managing lectures, you can manage a lecture\'s absentees here.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=lecture")' },
+                    description: 'In addition to managing lectures, you can manage a lecture\'s absentees here.',
+                    state: 'home'
                 },
                 {
                     name: 'Absentee',
                     meta: 'View and manage past absentees.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'View and manage past absentees.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=absentee")' },
+                    description: 'View and manage past absentees.',
+                    state: 'home'
                 },
                 {
                     name: 'Statistics',
                     meta: 'View various statistics.',
-                    imageURL: { 'background-image': 'url(' + getRandomImageUrl() + ')' },
-                    description: 'View various statistics like most bunked lectures, student most absent and so on.'
+                    imageURL: { 'background-image': 'url("https://unsplash.it/300/150/?random&x=statistics")' },
+                    description: 'View various statistics like most bunked lectures, student most absent and so on.',
+                    state: 'home'
                 }
             ];
-
-        };
-
-        function getRandomImageUrl() {
-
-            return 'https://unsplash.it/300/150/?random&x=' + Math.random();
 
         };
 

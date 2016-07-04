@@ -22,6 +22,12 @@ angular
                 templateUrl: 'modules/dashboard/dashboard.html'
             })
 
+            .state('grade', {
+                url: '/grades',
+                controller: 'GradeCtrl',
+                templateUrl: 'modules/grade/grade.html'
+            })
+
             .state('login', {
                 url: '/login',
                 controller: 'LoginCtrl',
