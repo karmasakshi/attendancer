@@ -26,6 +26,16 @@
       "type": "hasMany",
       "model": "student",
       "foreignKey": ""
+    },
+    "institution": {
+      "type": "belongsTo",
+      "model": "institution",
+      "foreignKey": ""
+    },
+    "lectures": {
+      "type": "hasMany",
+      "model": "lecture",
+      "foreignKey": ""
     }
   },
   "acls": [],

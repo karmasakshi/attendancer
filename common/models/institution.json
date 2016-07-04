@@ -25,6 +25,16 @@
       "type": "hasMany",
       "model": "teacher",
       "foreignKey": ""
+    },
+    "grades": {
+      "type": "hasMany",
+      "model": "grade",
+      "foreignKey": ""
+    },
+    "absentees": {
+      "type": "hasMany",
+      "model": "absentee",
+      "foreignKey": ""
     }
   },
   "acls": [],

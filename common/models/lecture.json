@@ -6,6 +6,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "division": {
+      "type": "string",
+      "required": true
+    },
     "date": {
       "type": "date",
       "required": true
@@ -14,7 +18,7 @@
       "type": "number",
       "required": true
     },
-    "duration": {
+    "durationInMinutes": {
       "type": "number",
       "required": true
     }
@@ -24,6 +28,11 @@
     "absentees": {
       "type": "hasMany",
       "model": "absentee",
+      "foreignKey": ""
+    },
+    "grade": {
+      "type": "belongsTo",
+      "model": "grade",
       "foreignKey": ""
     }
   },

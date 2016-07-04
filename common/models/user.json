@@ -1,28 +1,22 @@
 {
-  "name": "teacher",
+  "name": "user",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "firstName": {
+    "email": {
       "type": "string",
       "required": true
     },
-    "lastName": {
+    "password": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
-  "relations": {
-    "institution": {
-      "type": "belongsTo",
-      "model": "institution",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

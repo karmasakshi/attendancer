@@ -40,5 +40,9 @@
   "absentee": {
     "dataSource": "mysql",
     "public": true
+  },
+  "user": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

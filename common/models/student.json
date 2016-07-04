@@ -40,7 +40,7 @@
       "foreignKey": ""
     },
     "grade": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "grade",
       "foreignKey": ""
     }

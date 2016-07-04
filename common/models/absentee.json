@@ -9,13 +9,18 @@
   "validations": [],
   "relations": {
     "student": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "student",
       "foreignKey": ""
     },
     "lecture": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "lecture",
+      "foreignKey": ""
+    },
+    "institution": {
+      "type": "belongsTo",
+      "model": "institution",
       "foreignKey": ""
     }
   },
