@@ -29,6 +29,11 @@
       "type": "belongsTo",
       "model": "classroom",
       "foreignKey": ""
+    },
+    "subjects": {
+      "type": "hasAndBelongsToMany",
+      "model": "subject",
+      "foreignKey": ""
     }
   },
   "acls": [],

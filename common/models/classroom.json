@@ -7,7 +7,7 @@
   },
   "properties": {
     "grade": {
-      "type": "number",
+      "type": "string",
       "required": true
     },
     "division": {
