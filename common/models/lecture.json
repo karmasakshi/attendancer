@@ -1,38 +1,29 @@
 {
-  "name": "classroom",
+  "name": "lecture",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "grade": {
-      "type": "string",
+    "date": {
+      "type": "date",
       "required": true
     },
-    "division": {
-      "type": "string",
-      "required": true
-    },
-    "startYear": {
+    "startTime": {
       "type": "number",
       "required": true
     },
-    "endYear": {
+    "duration": {
       "type": "number",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "institution": {
-      "type": "belongsTo",
-      "model": "institution",
-      "foreignKey": ""
-    },
-    "students": {
+    "absentees": {
       "type": "hasMany",
-      "model": "student",
+      "model": "absentee",
       "foreignKey": ""
     }
   },

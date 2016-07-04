@@ -21,15 +21,23 @@
     "dataSource": "mysql",
     "public": true
   },
-  "classroom": {
-    "dataSource": "mysql",
-    "public": true
-  },
   "student": {
     "dataSource": "mysql",
     "public": true
   },
+  "grade": {
+    "dataSource": "mysql",
+    "public": true
+  },
   "subject": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "lecture": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "absentee": {
     "dataSource": "mysql",
     "public": true
   }

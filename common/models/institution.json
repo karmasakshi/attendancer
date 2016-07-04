@@ -10,31 +10,7 @@
       "type": "string",
       "required": true
     },
-    "city": {
-      "type": "string",
-      "required": true
-    },
-    "state": {
-      "type": "string",
-      "required": true
-    },
-    "country": {
-      "type": "string",
-      "required": true
-    },
     "branchName": {
-      "type": "string"
-    },
-    "address": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "number"
-    },
-    "email": {
-      "type": "string"
-    },
-    "avatar": {
       "type": "string"
     }
   },
@@ -48,11 +24,6 @@
     "teachers": {
       "type": "hasMany",
       "model": "teacher",
-      "foreignKey": ""
-    },
-    "classrooms": {
-      "type": "hasMany",
-      "model": "classroom",
       "foreignKey": ""
     }
   },

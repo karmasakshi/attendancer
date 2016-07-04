@@ -18,8 +18,8 @@
       "type": "string",
       "required": true
     },
-    "phone": {
-      "type": "number",
+    "password": {
+      "type": "string",
       "required": true
     }
   },

@@ -1,5 +1,5 @@
 {
-  "name": "subject",
+  "name": "grade",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -9,18 +9,17 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "order": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "grade": {
-      "type": "hasOne",
-      "model": "grade",
-      "foreignKey": ""
-    },
-    "students": {
-      "type": "hasAndBelongsToMany",
-      "model": "student",
+    "subjects": {
+      "type": "hasMany",
+      "model": "subject",
       "foreignKey": ""
     }
   },

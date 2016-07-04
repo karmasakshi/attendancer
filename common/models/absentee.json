@@ -1,26 +1,21 @@
 {
-  "name": "subject",
+  "name": "absentee",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
-    "grade": {
+    "student": {
       "type": "hasOne",
-      "model": "grade",
+      "model": "student",
       "foreignKey": ""
     },
-    "students": {
-      "type": "hasAndBelongsToMany",
-      "model": "student",
+    "lecture": {
+      "type": "hasOne",
+      "model": "lecture",
       "foreignKey": ""
     }
   },
