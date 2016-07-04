@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="attendancer">
+
+<html ng-app="attendancer" ng-strict-di>
 
 <head>
 
     <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Attendancer</title>
 
     <!-- build:css -->
 
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/spectre.css/dist/spectre.css" />
     <!-- endbower -->
+
+    <!-- Application -->
+    <link rel="stylesheet" href="styles/app.css" />
 
     <!-- endbuild -->
 
@@ -18,7 +25,17 @@
 
 <body>
 
-    <h1>Hello!</h1>
+    <!-- Navbar -->
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/" class="navbar-brand">Attendancer</a>
+        </section>
+    </header>
+
+    <!-- View -->
+    <div class="container">
+        <div class="columns col-gapless" ui-view></div>
+    </div>
 
     <!-- build:js -->
 
@@ -33,6 +50,9 @@
 
     <!-- Application -->
     <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/run.js"></script>
 
     <!-- endbuild -->
 
