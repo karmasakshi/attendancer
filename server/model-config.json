@@ -28,5 +28,9 @@
   "student": {
     "dataSource": "mysql",
     "public": true
+  },
+  "subject": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
