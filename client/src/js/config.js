@@ -12,14 +12,27 @@ angular
 
             .state('home', {
                 url: '/',
-                template: '<h1>Home</h1>'
+                controller: 'HomeCtrl',
+                templateUrl: 'modules/home/home.html'
+            })
+
+            .state('class', {
+                url: '/class',
+                controller: 'ClassCtrl',
+                templateUrl: 'modules/class/class.html'
             })
 
             .state('login', {
                 url: '/login',
-                template: '<h1>Login</h1>'
+                controller: 'LoginCtrl',
+                templateUrl: 'modules/user/login.html'
+            })
+
+            .state('logout', {
+                url: '/logout',
+                controller: 'LogoutCtrl'
             });
 
-        $urlRouterProvider.otherwise('home');
+        $urlRouterProvider.otherwise('/');
 
     }]);
