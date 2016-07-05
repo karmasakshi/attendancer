@@ -1,6 +1,7 @@
-.card-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 150px;
+.btn-block {
+    margin-bottom: 5px;
+}
+
+.btn-block:last-of-type {
+    margin-bottom: 0;
 }
