@@ -1,1 +1,17 @@
-<h1>Grade</h1>
+<div class="container">
+    <div class="columns" style="flex-wrap: wrap;">
+        <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="grade in grades">
+            <div class="card" style="margin: 5px;">
+                <div class="card-header">
+                    <h4 class="card-title">Grade {{grade.name}}<button class="btn btn-sm btn-link float-right">Edit</button></h4>
+                    <h6 class="card-meta">Order: {{grade.order}}</h6>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-block"><strong>{{grade.lectures.length}}</strong> lectures</button>
+                    <button class="btn btn-block"><strong>{{grade.students.length}}</strong> students</button>
+                    <button class="btn btn-block"><strong>{{grade.subjects.length}}</strong> subjects</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

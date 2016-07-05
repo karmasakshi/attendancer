@@ -4,9 +4,11 @@ angular
 
     .module('attendancer')
 
-    .config(['$compileProvider', '$stateProvider', '$urlRouterProvider', function ($compileProvider, $stateProvider, $urlRouterProvider) {
+    .config(['$compileProvider', '$stateProvider', '$urlRouterProvider', 'LoopBackResourceProvider', function ($compileProvider, $stateProvider, $urlRouterProvider, LoopBackResourceProvider) {
 
         $compileProvider.debugInfoEnabled(false);
+
+        LoopBackResourceProvider.setUrlBase('http://0.0.0.0:3000/api');
 
         $stateProvider
 

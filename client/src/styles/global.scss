@@ -3,3 +3,15 @@ body {
 
     -webkit-font-smoothing: antialiased;
 }
+
+.btn-block {
+    margin-bottom: 5px;
+}
+
+.btn-block:last-of-type {
+    margin-bottom: 0;
+}
+
+.btn-link {
+    padding: 0 !important;
+}

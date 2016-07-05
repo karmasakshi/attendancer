@@ -39,5 +39,35 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+    "list": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "institutionId",
+          "type": "number",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "grades",
+          "type": "array",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "/list",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
