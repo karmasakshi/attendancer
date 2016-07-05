@@ -40,7 +40,7 @@
   },
   "acls": [],
   "methods": {
-    "list": {
+    "listWithCounts": {
       "isStatic": true,
       "accepts": [
         {
@@ -66,6 +66,57 @@
         {
           "path": "/list",
           "verb": "get"
+        }
+      ]
+    },
+    "verifyAndDelete": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "number",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [],
+      "description": "",
+      "http": [
+        {
+          "path": "/delete",
+          "verb": "delete"
+        }
+      ]
+    },
+    "add": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "grade",
+          "type": "object",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "body"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "addedGrade",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "/add",
+          "verb": "post"
         }
       ]
     }

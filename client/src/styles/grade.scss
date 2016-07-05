@@ -1,0 +1,9 @@
+.grade-card {
+    height: 200px;
+}
+
+@media screen and (max-width: 480px) {
+    .grade-card {
+        height: initial;
+    }
+}

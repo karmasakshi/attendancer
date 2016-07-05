@@ -1,48 +1,29 @@
 <div class="container">
     <div class="columns" style="flex-wrap: wrap;">
-        <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="grade in grades">
-            <div class="card" style="margin: 5px;">
+        <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="grade in grades | orderBy: 'order'">
+            <div class="card grade-card" style="margin: 5px;">
                 <div class="card-header">
-                    <h4 class="card-title">Grade {{grade.name}}<button class="btn btn-link float-right no-padding" ng-click="activateEditor($index)">Edit</button></h4>
+                    <h4 class="card-title">Grade {{grade.name}}<button class="btn btn-sm btn-link float-right" style="height: 0; padding: 0;" ng-click="activateEditGradeModal($index)">Edit</button></h4>
                     <h6 class="card-meta">Order: {{grade.order}}</h6>
                 </div>
                 <div class="card-body">
-                    <button class="btn btn-block"><strong>{{grade.lectures.length}}</strong> lectures</button>
-                    <button class="btn btn-block"><strong>{{grade.students.length}}</strong> students</button>
-                    <button class="btn btn-block"><strong>{{grade.subjects.length}}</strong> subjects</button>
+                    <button class="btn btn-block" ng-disabled="grade.lectures.length === 0"><strong>{{grade.lectures.length}}</strong> lectures</button>
+                    <button class="btn btn-block" ng-disabled="grade.students.length === 0"><strong>{{grade.students.length}}</strong> students</button>
+                    <button class="btn btn-block" ng-disabled="grade.subjects.length === 0"><strong>{{grade.subjects.length}}</strong> subjects</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <div class="card grade-card" style="cursor: pointer; margin: 5px;" ng-click="activateAddGradeModal()">
+                <div class="card-body text-center" style="color: #b3b3b3;">
+                    <h1>+</h1>
+                    <h3>Add Grade</h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div ng-class="{'active': isEditorActive}" class="modal">
-    <div class="modal-overlay" ng-click="deactivateEditor()"></div>
-    <div class="modal-container">
-        <div class="modal-header">
-            <button class="btn btn-clear float-right" ng-click="deactivateEditor()"></button>
-            <div class="modal-title">Editing Grade {{grade.name}}</div>
-        </div>
-        <div class="divider"></div>
-        <div class="modal-body">
-            <div class="content">
-                <form>
-                    <div class="form-group">
-                        <label class="form-label" for="grade-name">Name</label>
-                        <input class="form-input" type="text" id="grade-name" placeholder="Name" ng-model="grade.name" />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="grade-order">Order</label>
-                        <input class="form-input" type="number" min="1" max="{{grades.length}}" id="grade-order" placeholder="Order" ng-model="grade.order"
-                        />
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="modal-footer">
-            <button class="btn btn-link" ng-click="deactivateEditor()" ng-disabled="isNascent">Cancel</button>
-            <button class="btn btn-primary" ng-click="updateGrade()" ng-class="{'loading': isNascent}">Update</button>
-        </div>
-    </div>
-</div>
+<div ng-include="'modules/grade/edit-grade-modal.html'"></div>
+
+<div ng-include="'modules/grade/add-grade-modal.html'"></div>

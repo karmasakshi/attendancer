@@ -10,8 +10,9 @@ angular
 
         // $scope.grade;
         // $scope.grades;
-        // $scope.isEditorActive;
-        // $scope.isNascent;
+        // $scope.isAddGradeModalActive;
+        // $scope.isEditGradeModalActive;
+        // $scope.pendingTask;
 
         /* --- FUNCTIONS --- */
 
@@ -24,31 +25,94 @@ angular
 
             $scope.grades = [];
 
-            $scope.isEditorActive = false;
+            $scope.isAddGradeModalActive = false;
+
+            $scope.isEditGradeModalActive = false;
+
+            $scope.pendingTask = null;
 
             $scope.getGrades();
 
         };
 
-        $scope.activateEditor = function (i) {
+        $scope.activateAddGradeModal = function () {
 
-            $scope.isEditorActive = true;
+            $scope.isAddGradeModalActive = true;
 
-            $scope.grade = $scope.grades[i];
+            $scope.grade = {
+                name: '',
+                order: ''
+            };
 
         };
 
-        $scope.deactivateEditor = function () {
+        $scope.activateEditGradeModal = function (i) {
 
-            $scope.isEditorActive = false;
+            $scope.isEditGradeModalActive = true;
+
+            $scope.grade = $scope.grades[i];
+
+            $scope.grade.index = i;
+
+        };
+
+        $scope.addGrade = function () {
+
+            $scope.pendingTask = 'add';
+
+            Grade.add($scope.grade).$promise.then(function (response) {
+
+                $scope.grades.push(response);
+
+                $scope.deactivateAddGradeModal();
+
+                $scope.pendingTask = null;
+
+            }, function () {
+
+                $rootScope.notify('Failed.');
+
+                $scope.pendingTask = null;
+
+            });
+
+        };
+
+        $scope.deactivateAddGradeModal = function () {
+
+            $scope.isAddGradeModalActive = false;
 
             $scope.grade = null;
 
         }
 
+        $scope.deactivateEditGradeModal = function () {
+
+            $scope.isEditGradeModalActive = false;
+
+            $scope.grade = null;
+
+        }
+
+        $scope.deleteGrade = function () {
+
+            Grade.verifyAndDelete({ id: $scope.grade.id }).$promise.then(function () {
+
+                $scope.grades.splice($scope.grade.index, 1);
+
+                $scope.deactivateEditGradeModal();
+
+            }, function () {
+
+                $rootScope.notify('Failed.');
+
+            });
+
+        };
+
         $scope.getGrades = function () {
 
-            Grade.list({ institutionId: 1 }).$promise.then(function (response) {
+            Grade.listWithCounts({ institutionId: 1 }).$promise.then(function (response) {
 
                 $scope.grades = response;
 
@@ -62,19 +126,19 @@ angular
 
         $scope.updateGrade = function () {
 
-            $scope.isNascent = true;
+            $scope.pendingTask = 'update';
 
             $scope.grade.$save().then(function () {
 
-                $scope.deactivateEditor();
+                $scope.deactivateEditGradeModal();
 
-                $scope.isNascent = false;
+                $scope.pendingTask = null;
 
             }, function () {
 
                 $rootScope.notify('Failed.');
 
-                $scope.isNascent = false;
+                $scope.pendingTask = null;
 
             });
 
