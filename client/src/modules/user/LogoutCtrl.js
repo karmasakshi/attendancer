@@ -12,6 +12,8 @@ angular
 
         $scope.initialize = function () {
 
+            $rootScope.pageTitle = 'Logout - Attendancer';
+
             sessionStorage.clear();
 
             $rootScope.user = null;
@@ -22,7 +24,6 @@ angular
 
         /* --- RUN --- */
 
-        // Initialize
         $scope.initialize();
 
     }]);

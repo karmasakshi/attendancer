@@ -14,7 +14,6 @@ angular
 
         $scope.initialize = function () {
 
-            // Set page title
             $rootScope.pageTitle = 'Dashboard - Attendancer';
 
             $scope.modules = [
@@ -68,7 +67,6 @@ angular
 
         $rootScope.initializeUser().then(function () {
 
-            // Initialize
             $scope.initialize();
 
         }, function () {

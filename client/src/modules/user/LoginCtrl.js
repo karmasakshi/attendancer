@@ -14,7 +14,6 @@ angular
 
         $scope.initialize = function () {
 
-            // Set page title
             $rootScope.pageTitle = 'Login - Attendancer';
 
             $scope.credentials = {
@@ -44,7 +43,7 @@ angular
 
             }, function () {
 
-                $rootScope.notify('Couldn\'t log you in.');
+                $rootScope.notify('Failed.');
 
             });
 
@@ -52,7 +51,6 @@ angular
 
         /* --- RUN --- */
 
-        // Initialize
         $scope.initialize();
 
     }]);

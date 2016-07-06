@@ -18,7 +18,6 @@ angular
 
         $scope.initialize = function () {
 
-            // Set page title
             $rootScope.pageTitle = 'Grade - Attendancer';
 
             $scope.grade = null;
@@ -146,7 +145,16 @@ angular
 
         /* --- RUN --- */
 
-        // Initialize
-        $scope.initialize();
+        $rootScope.initializeUser().then(function () {
+
+            $scope.initialize();
+
+        }, function () {
+
+            sessionStorage.redirectState = 'grade';
+
+            $rootScope.changeState('login');
+
+        });
 
     }]);

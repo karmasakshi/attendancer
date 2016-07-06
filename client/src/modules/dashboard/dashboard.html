@@ -1,5 +1,7 @@
 <div class="container">
     <div class="columns" style="flex-wrap: wrap;">
+
+        <!-- Module card -->
         <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="module in modules">
             <div class="card module-card" style="cursor: pointer; margin: 5px;" ng-click="$root.changeState(module.state)">
                 <div class="card-image image-background" style="height: 150px;" ng-style="module.imageURL"></div>
@@ -12,5 +14,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>

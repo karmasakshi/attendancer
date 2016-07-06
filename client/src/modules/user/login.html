@@ -9,16 +9,16 @@
             <form>
                 <div class="form-group">
                     <label class="form-label" for="credentials-email">Email</label>
-                    <input class="form-input" type="email" id="credentials-email" placeholder="Email" />
+                    <input class="form-input" type="email" id="credentials-email" ng-model="credentials.email" placeholder="Email" />
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="credentials-password">Password</label>
-                    <input class="form-input" type="password" id="credentials-password" placeholder="Password" />
+                    <input class="form-input" type="password" id="credentials-password" ng-model="credentials.password" placeholder="Password" />
                 </div>
             </form>
         </div>
         <div class="card-footer text-right">
-            <button class="btn btn-primary" ng-click="login()">Login</button>
+            <button type="button" class="btn btn-primary" ng-click="login()">Login</button>
         </div>
     </div>
 </div>

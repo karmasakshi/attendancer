@@ -1,18 +1,22 @@
 <div class="container">
     <div class="columns" style="flex-wrap: wrap;">
+
+        <!-- Grade card -->
         <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="grade in grades | orderBy: 'order'">
             <div class="card grade-card" style="margin: 5px;">
                 <div class="card-header">
-                    <h4 class="card-title">Grade {{grade.name}}<button class="btn btn-sm btn-link float-right" style="height: 0; padding: 0;" ng-click="activateEditGradeModal($index)">Edit</button></h4>
+                    <h4 class="card-title">Grade {{grade.name}}<button type="button" class="btn btn-sm btn-link float-right" style="height: 0; padding: 0;" ng-click="activateEditGradeModal($index)">Edit</button></h4>
                     <h6 class="card-meta">Order: {{grade.order}}</h6>
                 </div>
                 <div class="card-body">
-                    <button class="btn btn-block" ng-disabled="grade.lectures.length === 0"><strong>{{grade.lectures.length}}</strong> lectures</button>
-                    <button class="btn btn-block" ng-disabled="grade.students.length === 0"><strong>{{grade.students.length}}</strong> students</button>
-                    <button class="btn btn-block" ng-disabled="grade.subjects.length === 0"><strong>{{grade.subjects.length}}</strong> subjects</button>
+                    <button type="button" class="btn btn-block" ng-disabled="grade.lectures.length === 0"><strong>{{grade.lectures.length}}</strong> lectures</button>
+                    <button type="button" class="btn btn-block" ng-disabled="grade.students.length === 0"><strong>{{grade.students.length}}</strong> students</button>
+                    <button type="button" class="btn btn-block" ng-disabled="grade.subjects.length === 0"><strong>{{grade.subjects.length}}</strong> subjects</button>
                 </div>
             </div>
         </div>
+
+        <!-- Add Grade card -->
         <div class="col-xs-6 col-sm-4 col-md-3">
             <div class="card grade-card" style="cursor: pointer; margin: 5px;" ng-click="activateAddGradeModal()">
                 <div class="card-body text-center" style="color: #b3b3b3;">
@@ -21,6 +25,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 

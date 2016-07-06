@@ -2,7 +2,7 @@
     <div class="modal-overlay" ng-disabled="pendingTask === 'update'" ng-click="deactivateEditGradeModal()"></div>
     <div class="modal-container">
         <div class="modal-header">
-            <button class="btn btn-clear float-right" ng-disabled="pendingTask === 'update'" ng-click="deactivateEditGradeModal()"></button>
+            <button type="button" class="btn btn-clear float-right" ng-disabled="pendingTask === 'update'" ng-click="deactivateEditGradeModal()"></button>
             <div class="modal-title">Editing Grade {{grade.name}}</div>
         </div>
         <div class="divider"></div>
@@ -15,17 +15,16 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="grade-order">Order</label>
-                        <input class="form-input" type="number" min="1" max="{{grades.length}}" id="grade-order" placeholder="Order" ng-model="grade.order"
-                        />
+                        <input class="form-input" type="number" min="1" max="{{grades.length}}" id="grade-order" placeholder="Order" ng-model="grade.order" />
                     </div>
                 </form>
             </div>
         </div>
         <div class="divider"></div>
         <div class="modal-footer">
-            <button class="btn btn-link float-left" ng-click="deleteGrade()" ng-disabled="grade.lectures.length > 0 || grade.students.length > 0 || grade.subjects.length > 0">Delete</button>
-            <button class="btn btn-link" ng-click="deactivateEditGradeModal()" ng-disabled="pendingTask === 'update'">Cancel</button>
-            <button class="btn btn-primary" ng-click="updateGrade()" ng-class="{'loading': pendingTask === 'update'}">Update</button>
+            <button type="button" class="btn btn-link float-left" ng-click="deleteGrade()" ng-disabled="grade.lectures.length > 0 || grade.students.length > 0 || grade.subjects.length > 0">Delete</button>
+            <button type="button" class="btn btn-link" ng-click="deactivateEditGradeModal()" ng-disabled="pendingTask === 'update'">Cancel</button>
+            <button type="button" class="btn btn-primary" ng-click="updateGrade()" ng-class="{'loading': pendingTask === 'update'}">Update</button>
         </div>
     </div>
 </div>

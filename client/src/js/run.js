@@ -15,7 +15,6 @@ angular
 
         $rootScope.initialize = function () {
 
-            // Set page title
             $rootScope.pageTitle = 'Attendancer';
 
             $rootScope.initializeUser();
@@ -58,7 +57,6 @@ angular
 
         /* --- RUN --- */
 
-        // Initialize
         $rootScope.initialize();
 
     }]);

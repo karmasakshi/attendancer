@@ -12,14 +12,12 @@ angular
 
         $scope.initialize = function () {
 
-            // Set page title
             $rootScope.pageTitle = 'Home - Attendancer';
 
         };
 
         /* --- RUN --- */
 
-        // Initialize
         $scope.initialize();
 
     }]);
