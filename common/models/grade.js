@@ -3,6 +3,13 @@ var async = require('async');
 
 module.exports = function (Grade) {
 
+    Grade.disableRemoteMethod('find', true);
+    Grade.disableRemoteMethod('upsert', true);
+    Grade.disableRemoteMethod('create', true);
+    Grade.disableRemoteMethod('findById', true);
+    Grade.disableRemoteMethod('exists', true);
+    Grade.disableRemoteMethod('updateAttributes', false);
+
     Grade.add = function (grade, callback) {
 
         grade.institutionId = 1;
